@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { GalleryHomeComponent } from './components/gallery-home/gallery-home.component';
 
 
 @NgModule({
@@ -24,7 +25,10 @@ import { HomeComponent } from './pages/home/home.component';
 
     BlogHomeComponent,
     FooterComponent,
-    HomeComponent
+
+    HomeComponent,
+    GalleryHomeComponent
+
 
   ],
   imports: [
