@@ -21,11 +21,9 @@ import { GalleryHomeComponent } from './components/gallery-home/gallery-home.com
 
     ProductComponent,
     AssessmentComponent,
-    OurServicesComponent
-
+    OurServicesComponent,
     BlogHomeComponent,
     FooterComponent,
-
     HomeComponent,
     GalleryHomeComponent
 
