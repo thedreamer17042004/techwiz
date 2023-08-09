@@ -1,0 +1,170 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name":"Lorem ipsum dolor sit ame.",
+            "image": "./assets/images/sp1",
+            "amount": 1,
+            "price":65.00,
+            "saleprice": 55.25,
+            "categoryId": 1,
+            "star":5
+        },
+        {
+            "id": 2,
+            "name": "Sed Ut Perspiciatis Unde Omnis Iste",
+            "image": "./assets/images/sp2",
+            "amount": 1,
+            "price":24.00,
+            "saleprice": 16.80,
+            "categoryId": 1,
+            "star":0
+        },
+        {
+            "id": 3,
+            "name": "Suspendisse urna nibh.",
+            "image": "./assets/images/sp3",
+            "amount": 1,
+            "price":55.00,
+            "saleprice": 0,
+            "categoryId": 1,
+            "star":4
+        },
+        {
+            "id": 4,
+            "name": "Quisque volutpat mattis.",
+            "image": "./assets/images/sp4",
+            "amount": 1,
+            "price":80.00,
+            "saleprice": 64.00,
+            "categoryId": 1,
+            "star":0
+        },
+        {
+            "id": 5,
+            "name": "Qui Dolorem Ipsum",
+            "image": "./assets/images/sp5",
+            "amount": 1,
+            "price":40.00,
+            "saleprice": 24.00,
+            "categoryId": 1,
+            "star":5
+        },
+        {
+            "id": 6,
+            "name": "Malesuada erat ut turpis.",
+            "image": "./assets/images/sp6",
+            "amount": 1,
+            "price":22.00,
+            "saleprice": 17.06,
+            "categoryId": 1,
+            "star":5
+        },
+        {
+            "id": 7,
+            "name": "Amy Byer Big Colorblock Trapeze Dress",
+            "image": "./assets/images/sp7",
+            "amount": 1,
+            "price":25.00,
+            "saleprice": 15.00,
+            "categoryId": 2,
+            "star":0
+        },
+        {
+            "id": 8,
+            "name": "Lorem ipsum dolor sit ame.",
+            "image": "./assets/images/sp8",
+            "amount": 1,
+            "price":899.00,
+            "saleprice": 0,
+            "categoryId": 2,
+            "star":5
+        },
+        {
+            "id": 9,
+            "name": "Garden Asplenium",
+            "image": "./assets/images/sp9",
+            "amount": 1,
+            "price":159.00,
+            "saleprice": 82.68,
+            "categoryId": 3,
+            "star":0
+        },
+        {
+            "id": 10,
+            "name": "Table Garden Asplenium",
+            "image": "./assets/images/sp10",
+            "amount": 1,
+            "price":199.00,
+            "saleprice": 109.45,
+            "categoryId": 4,
+            "star":0
+        }
+    ],
+
+    "category":[
+        {
+            "id": 1,
+            "name": "Living room"
+        },
+        {
+            "id": 2,
+            "name": "Fashion"
+        },
+        {
+            "id": 3,
+            "name": "Artificial Plants"
+        },
+        {
+            "id": 4,
+            "name": "Kids fashion"
+        }
+    ],
+
+    "login": [
+        {
+            "id":1,
+            "username": "Anh a",
+            "email": "vana@gmail.com",
+            "password": "123"
+        },
+        {
+            "id":2,
+            "username": "van binh",
+            "email": "binh@gmail.com",
+            "password": "456"
+        }
+    ],
+
+    "signup": [
+        
+    ],
+
+    "cart": [
+        {
+            "id": 5,
+            "name": "Qui Dolorem Ipsum",
+            "image": "./assets/images/sp5",
+            "amount": 1,
+            "price":40.00,
+            "saleprice": 24.00,
+            "categoryId": 1,
+            "star":5
+        }
+    ],
+
+    "checkout": [
+        {
+            "id": 5,
+            "name": "Qui Dolorem Ipsum",
+            "image": "./assets/images/sp5",
+            "amount": 1,
+            "price":40.00,
+            "saleprice": 24.00,
+            "categoryId": 1,
+            "star":5
+        }
+    ]
+
+    
+}
