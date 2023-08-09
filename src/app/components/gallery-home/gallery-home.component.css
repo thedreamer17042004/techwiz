@@ -104,14 +104,140 @@
 }
 
 
+/* paralax */
+.single-progress-dec {
+    color: #fff;
+}
+
+.single-progress-dec i.fa {
+    font-size: 36px;
+    display: block;
+    color: #6cbe03;
+}
+.xx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.single-progress-dec > span {
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 10px 0;
+}
+.single-progress-dec h3 {
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.single-progress-dec h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif !important;;
+
+}
+.abc {
+    background-color: rgba(0, 0, 0, 0.7);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(1);
+    transition: all 0.5s ease 0s;
+    width: 100%;
+    z-index: 1;
+}
+
+.single-progress-dec {
+    color: #fff;
+}
+
+/* our team */
+.single-member {
+    position: relative;
+    overflow: hidden;
+}
+
+.single-member img {
+    width: 100%;
+}
+
+.member-title {
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #6cbe03;
+    transition: all 1s ease 0s;
+    opacity: 0;
+}
+.member-title h2 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.member-title h3 {
+    font-size: 13px;
+    color: #fff;
+}
+
+.social-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.social-overlay ul {
+    list-style: none;
+}
+
+.social-overlay ul li a i.fa-brands {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #6cbe03;
+    color: #fff;
+    transition: 0.5s;
+    transform: translate(36px);
+}
+.single-member:hover .social-overlay ul li a i.fa-brands{
+    transform: translate(0px);
+    
+}
+.single-member:hover .member-title{
+    opacity: 1;
 
 
+}
 @media screen and (max-width:540px) {
   
     .section-title p {
         margin: 20px 20px !important;
     }
-   
- 
-}
+    .res {
+        /* height: 700px; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .abc {
+        position: relative;
+        height: 700px !important;
+    }
+    .single-progress-dec {
+        margin-top: 8px;
 
+    }
+}
+@media screen and (max-width:768px) {
+    .single-progress-dec, .single-member {
+        margin-bottom: 30px;
+    }
+
+}

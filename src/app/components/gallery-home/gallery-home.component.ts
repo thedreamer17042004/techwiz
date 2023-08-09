@@ -8,6 +8,7 @@ declare var $: any;
 })
 export class GalleryHomeComponent implements OnInit{
   ngOnInit(): void {
+
     $('.produc-two').owlCarousel({
       loop:true,
       margin:10,
@@ -26,6 +27,8 @@ export class GalleryHomeComponent implements OnInit{
       }
     });
 
+
+    // owlcarowsel thay đổi btn slidering
     $(document).ready(function(){
       $('.owl-carousel').owlCarousel({
          
@@ -33,6 +36,10 @@ export class GalleryHomeComponent implements OnInit{
        $( ".owl-prev").html('<i class="fa-solid fa-angle-left"></i>');
        $( ".owl-next").html('<i class="fa-solid fa-angle-right"></i>');
       }); 
+      
+      // parralax
+      $('.parallax-window').parallax({imageSrc: 'http://lovesome.biz/tf-template/garden/img/project-bg.jpg'});
+
 
 
  
