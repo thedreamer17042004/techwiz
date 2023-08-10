@@ -47,7 +47,8 @@ import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
     RegisterComponent,
     ContactsComponent,
     BlogComponent,
-    DetailBlogComponent
+    DetailBlogComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
