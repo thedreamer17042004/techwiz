@@ -16,6 +16,8 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GalleryHomeComponent } from './components/gallery-home/gallery-home.component';
+import { ShopComponent } from './pages/shop/shop.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { GalleryHomeComponent } from './components/gallery-home/gallery-home.com
     BlogHomeComponent,
     FooterComponent,
     HomeComponent,
-    GalleryHomeComponent
+    GalleryHomeComponent,
+    ShopComponent,
 
 
 
@@ -41,7 +44,8 @@ import { GalleryHomeComponent } from './components/gallery-home/gallery-home.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
