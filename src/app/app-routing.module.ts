@@ -10,6 +10,8 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 
 import { BlogComponent } from './pages/blog/blog.component';
 import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,7 +20,12 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'blog', component:BlogComponent},
   {path: 'blog/blog-detail', component:DetailBlogComponent},
+
+  {path: 'cart', component:CartComponent},
+  {path: 'about', component:AboutUsComponent},
+
    {path: 'contact', component: ContactsComponent}
+
 ];
 
 @NgModule({

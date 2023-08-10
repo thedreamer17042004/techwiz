@@ -24,6 +24,8 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 
 import { BlogComponent } from './pages/blog/blog.component';
 import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 
 
@@ -48,7 +50,15 @@ import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
     ContactsComponent,
     BlogComponent,
     DetailBlogComponent,
+
+    CartComponent,
+    AboutUsComponent,
+
+
+
+
     AboutPageComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 /* about */
 .about {
-    margin-top: 90px;
+    /* margin-top: 90px; */
     padding-top: 100px;
     padding-bottom: 50px;
     background-color: rgb(234, 234, 234);
@@ -9,8 +9,16 @@
     color: #6cbe03;
 }
 .about .about-top h2{
-    font-size: 50px;
-    position: relative;
+    
+    font-size: 40px;
+  color: #1a1a1a;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+
 }
 .about .about-top h2::before {
     position: absolute;
