@@ -16,6 +16,9 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GalleryHomeComponent } from './components/gallery-home/gallery-home.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -26,17 +29,16 @@ import { GalleryHomeComponent } from './components/gallery-home/gallery-home.com
     BannerComponent,
     AboutsComponent,
 
-
     ProductComponent,
     AssessmentComponent,
     OurServicesComponent,
     BlogHomeComponent,
     FooterComponent,
     HomeComponent,
-    GalleryHomeComponent
-
-
-
+    GalleryHomeComponent,
+    AboutPageComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
