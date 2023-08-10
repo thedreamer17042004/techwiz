@@ -20,6 +20,12 @@ import { AboutPageComponent } from './components/about-page/about-page.component
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
+import { ContactsComponent } from './components/contacts/contacts.component';
+
+import { BlogComponent } from './pages/blog/blog.component';
+import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +44,10 @@ import { RegisterComponent } from './components/register/register.component';
     GalleryHomeComponent,
     AboutPageComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContactsComponent,
+    BlogComponent,
+    DetailBlogComponent
   ],
   imports: [
     BrowserModule,

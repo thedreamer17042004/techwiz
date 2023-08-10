@@ -6,11 +6,19 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 
+import { ContactsComponent } from './components/contacts/contacts.component';
+
+import { BlogComponent } from './pages/blog/blog.component';
+import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
+
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutPageComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'blog', component:BlogComponent},
+  {path: 'blog/blog-detail', component:DetailBlogComponent},
+   {path: 'contact', component: ContactsComponent}
 ];
 
 @NgModule({
