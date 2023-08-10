@@ -10,8 +10,8 @@
            </div>
         </div>
         <div class="header-right col-md-12 col-lg-3">
-            <a href="#"><i class="fa-solid fa-right-to-bracket"></i> login</a>
-            <a href="#"><i class="fa-regular fa-user"></i>register</a>
+            <a routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i> login</a>
+            <a routerLink="/register"><i class="fa-regular fa-user"></i>register</a>
         </div></div>
     </div>
 </div>
@@ -28,12 +28,10 @@
                         <div class="collapse navbar-collapse menu-right col-md-12 col-lg-8" id="collapsibleNavId">
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                                 <li class="nav-item active">
-
-                                    <a class="nav-link " href="menu.component.html">HOME <span class="sr-only">(current)</span></a>
-
+                                    <a class="nav-link " routerLink="/">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="">ABOUT US</a>
+                                    <a class="nav-link " routerLink="/about">About US</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link " href="#">DETAILS</a>

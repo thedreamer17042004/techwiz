@@ -16,6 +16,9 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GalleryHomeComponent } from './components/gallery-home/gallery-home.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 import { ContactsComponent } from './components/contacts/contacts.component';
 
@@ -32,7 +35,6 @@ import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
     BannerComponent,
     AboutsComponent,
 
-
     ProductComponent,
     AssessmentComponent,
     OurServicesComponent,
@@ -40,15 +42,12 @@ import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
     FooterComponent,
     HomeComponent,
     GalleryHomeComponent,
-
-    ContactsComponent
-
+    AboutPageComponent,
+    LoginComponent,
+    RegisterComponent,
+    ContactsComponent,
     BlogComponent,
-    DetailBlogComponent,
-
-
-
-
+    DetailBlogComponent
   ],
   imports: [
     BrowserModule,
