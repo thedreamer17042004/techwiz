@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { ShopComponent } from './pages/shop/shop.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
-
-
 import { BlogComponent } from './pages/blog/blog.component';
 import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
 import { CartComponent } from './pages/cart/cart.component';
@@ -18,16 +16,16 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'blog', component:BlogComponent},
   {path: 'blog-detail', component:DetailBlogComponent},
-
+  { path: 'shop', component: ShopComponent },
   {path: 'cart', component:CartComponent},
   {path: 'about', component:AboutUsComponent},
+  {path: 'contact', component: ContactComponent}
 
-   {path: 'contact', component: ContactComponent}
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -16,6 +16,10 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GalleryHomeComponent } from './components/gallery-home/gallery-home.component';
+
+import { ShopComponent } from './pages/shop/shop.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
@@ -26,6 +30,7 @@ import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
+
 
 
 
@@ -42,6 +47,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     FooterComponent,
     HomeComponent,
     GalleryHomeComponent,
+
+    ShopComponent,
+
     LoginComponent,
     RegisterComponent,
     ContactsComponent,
@@ -54,7 +62,8 @@ import { ContactComponent } from './pages/contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
