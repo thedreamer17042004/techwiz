@@ -16,7 +16,12 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GalleryHomeComponent } from './components/gallery-home/gallery-home.component';
+
 import { ContactsComponent } from './components/contacts/contacts.component';
+
+import { BlogComponent } from './pages/blog/blog.component';
+import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
+
 
 
 @NgModule({
@@ -35,7 +40,12 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     FooterComponent,
     HomeComponent,
     GalleryHomeComponent,
+
     ContactsComponent
+
+    BlogComponent,
+    DetailBlogComponent,
+
 
 
 
