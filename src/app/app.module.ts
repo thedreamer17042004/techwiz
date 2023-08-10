@@ -24,7 +24,7 @@ import { GalleryHomeComponent } from './components/gallery-home/gallery-home.com
 
     MenuComponent,
     BannerComponent,
-    AboutsComponent
+    AboutsComponent,
 
 
     ProductComponent,
