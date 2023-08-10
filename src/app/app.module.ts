@@ -16,7 +16,6 @@ import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { GalleryHomeComponent } from './components/gallery-home/gallery-home.component';
-import { AboutPageComponent } from './components/about-page/about-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
@@ -26,17 +25,16 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
     MenuComponent,
     BannerComponent,
     AboutsComponent,
-
     ProductComponent,
     AssessmentComponent,
     OurServicesComponent,
@@ -44,21 +42,14 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     FooterComponent,
     HomeComponent,
     GalleryHomeComponent,
-    AboutPageComponent,
     LoginComponent,
     RegisterComponent,
     ContactsComponent,
     BlogComponent,
     DetailBlogComponent,
-
     CartComponent,
     AboutUsComponent,
-
-
-
-
-    AboutPageComponent
-
+    ContactComponent
   ],
   imports: [
     BrowserModule,
