@@ -2,25 +2,25 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
-.bann-con{
+.banner {
     position: relative;
 }
-.bann-con:before{
+/* .banner::before{
         content: "";
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.9);
         height: 100%;
         left: 0;
         position: absolute;
         top: 0;
         width: 100%;
         z-index: 1;
-}
+} */
 .banner .carousel-caption {
     position: absolute !important;
     left: 50% !important;
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
-    width: 60%;
+    width: 100%;
 }
 .banner .carousel-caption{
     font-family: 'Raleway', sans-serif;
@@ -49,7 +49,6 @@ body {
 }
 .banner  img{
     width: 100%;
-    height: auto;
 }
 .carousel-control-next .carousel-control-next-icon{
     margin-top: 3px;
