@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { AboutsComponent } from './components/abouts/abouts.component';
 
 import { ProductComponent } from './components/product/product.component';
 import { AssessmentComponent } from './components/assessment/assessment.component';
@@ -19,6 +22,11 @@ import { GalleryHomeComponent } from './components/gallery-home/gallery-home.com
   declarations: [
     AppComponent,
 
+    MenuComponent,
+    BannerComponent,
+    AboutsComponent
+
+
     ProductComponent,
     AssessmentComponent,
     OurServicesComponent,
@@ -26,6 +34,7 @@ import { GalleryHomeComponent } from './components/gallery-home/gallery-home.com
     FooterComponent,
     HomeComponent,
     GalleryHomeComponent
+
 
 
   ],
