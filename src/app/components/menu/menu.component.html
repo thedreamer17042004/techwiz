@@ -9,11 +9,17 @@
                     <a routerLink="/"><i class="fa-solid fa-clock"></i> Mon - Fri : 9:00 -1700</a>
                 </div>
             </div>
-            <div class="header-right col-md-12 col-lg-3">
-                <a routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i> login</a>
-
-                <a routerLink="/register"><i class="fa-regular fa-user"></i>register</a>
-
+            <div class="header-right col-md-12 col-lg-3" *ngIf="!check">
+                <a routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                <a routerLink="/register"><i class="fa-regular fa-user"></i> Register</a>
+            </div>
+            <div class="header-right col-md-12 col-lg-3" *ngIf="check">
+                <a>
+                    Hello, {{AccLogin.username}}
+                </a>
+                <a style="cursor: pointer;" (click)="logOut()">
+                    <i class="fa-solid fa-right-to-bracket"></i> Logout
+                </a>
             </div>
         </div>
     </div>
