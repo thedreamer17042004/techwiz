@@ -24,7 +24,8 @@
                     <div class="row">
                         <div class="in-detailt-left col-lg-6">
                             <div class="dd-detail">
-                                <img src="./assets/images/sp13.jpg" alt="">
+                                <!-- <img src="./assets/images/sp13.jpg" alt=""> -->
+                                <img [src]="dataDetail.image" alt="">
                                 <p class="new-left">new</p>
                                 <p class="sale-right">sale</p>
                             </div>
@@ -47,7 +48,7 @@
                             </div>
                         </div>
                         <div class="in-detailt-right  col-lg-6">
-                            <h2>SUSPENDISSE URNA NIBH.</h2>
+                            <h2>{{dataDetail.name}}</h2>
                             <div class="row bin">
                                 <div class="in-detailt-icon det-bin-item thu">
                                     <i class="fa-solid fa-star"></i>
@@ -68,8 +69,8 @@
                             </div>
                             <div class="price">
                                 <div class="row thut">
-                                    <h4>$109.45 </h4>
-                                    <p class="gach">$199.00</p>
+                                    <h4>{{dataDetail.saleprice}} </h4>
+                                    <p class="gach">{{dataDetail.price}}</p>
                                 </div>
                             </div>
                             <div class="color">
@@ -87,7 +88,7 @@
                                     <div class="tang">
                                         <div class="row tat">
                                             <div class="nhap  col-sm-6 col-md-5 col-lg-5">
-                                                <input class="nb-tt" type="text" value="2">
+                                                <input class="nb-tt" type="text" value="1">
                                             </div>
                                             <div class="thay-doi  col-sm-6 col-md-7 col-lg-7">
                                                 <div class="bt-item">

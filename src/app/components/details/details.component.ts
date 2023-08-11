@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MyAppService } from 'src/app/service/my-app.service';
+
 declare var $: any;
 @Component({
   selector: 'app-details',
@@ -6,6 +9,12 @@ declare var $: any;
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit{
+  dataDetail:any;
+  products: any = [];
+
+
+
+  constructor(private product: MyAppService, private route: ActivatedRoute){}
   
     ngOnInit(): void {
       // carousel blogHome
@@ -41,20 +50,36 @@ export class DetailsComponent implements OnInit{
             }
         }
       })
-
-     
-
-
         // owlcarowsel thay đổi btn slidering
-        $(document).ready(function(){
+      $(document).ready(function(){
        
           // parralax
           $('.parallax-window').parallax({imageSrc: 'http://lovesome.biz/tf-template/garden/img/page-title-bg.jpg'});
     
         })
     
-    
+        this.product.getData().subscribe((res: any) => {
+          this.products = res.products
+          this.route.paramMap.subscribe(params => {
+            let id =  params.get('id');
+            this.dataDetail = this.getProductById(id);
+          });
+        })
+
+ 
+      
+
+
       
     }
     
+      getProductById(id:any) {
+          let info:any = this.products.find((item: any) => {
+            return item.id == id
+        });
+        console.log(info)
+      
+         return info;
+         
+      }
 }

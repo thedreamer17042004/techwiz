@@ -8,11 +8,11 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-4 col-sm-6 mb-4" *ngFor="let prd of products">
+      <div class="col-lg-4 col-sm-6 mb-4" *ngFor="let prd of pro">
         <div class="card text-left single-product">
           <div class="img-area">
-            <a href="#">
-              <img class="card-img-top" [src]="prd.image" alt="">
+            <a [routerLink]="['/detail',  prd.id]">
+              <img  class="card-img-top" [src]="prd.image" alt="">
             </a>
             <!-- <span class="sticker new-product">New</span> -->
             <span class="sticker sale-product">Sale</span>
@@ -23,7 +23,7 @@
               <a href="#" class="my-btn">
                 <i class="fa-solid fa-heart"></i>
               </a>
-              <a href="#" class="my-btn">
+              <a [routerLink]="['/detail',  prd.id]"class="my-btn">
                 <i class="fa-solid fa-list"></i>
               </a>
             </div>
@@ -31,7 +31,7 @@
 
           <div class="card-body">
             <h5 class="card-title text-center">
-              <a href="#">{{prd.name}}</a>
+              <a [routerLink]="['/detail',  prd.id]">{{prd.name}}</a>
             </h5>
 
             <div class="star-content text-center mb-3" *ngIf="prd.star == 0">

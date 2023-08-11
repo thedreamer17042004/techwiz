@@ -55,6 +55,8 @@ export class ShopComponent implements OnInit {
       this.products = res.products;
     })
 
+
+    
   }
 
   async showProductByCat(id: number) {
@@ -99,4 +101,7 @@ export class ShopComponent implements OnInit {
       this.products = res.products;
     })
   }
+
+
+ 
 }
