@@ -47,7 +47,8 @@ export class LoginComponent implements OnInit{
            this._route.navigate(['login']);
          }
        }, err=>{
-         alert('Something was wrong');
+        this.notifyService.showfalse("Something went wrong", "Notification", 1009)
+
        })
       
    

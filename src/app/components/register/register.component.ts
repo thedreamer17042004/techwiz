@@ -34,6 +34,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(signF:FormGroup) {
     if(this.signF.invalid) return;
       this.serve.postUser(this.signF.value).subscribe(res=>{
+        console.log(res)
         this.notifyService.showSuccessWithTimeout("Registered successfully", "Notification", 1000)
         this.signF.reset();
         this._route.navigate(['']);
