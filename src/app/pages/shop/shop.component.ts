@@ -30,7 +30,6 @@ export class ShopComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.activatedRoute.queryParamMap.subscribe((params) => {
       let urlCat: string = params.has('categoryId')
         ? `categoryId=${params.get('categoryId')}&`
@@ -103,5 +102,11 @@ export class ShopComponent implements OnInit {
   }
 
 
- 
+  addToCart(id: any) {
+    let prd = this.app.getProductById(id, this.products);
+    let check = this.app.savePrd(prd);
+    if (check) {
+      alert("Success");
+    }
+  }
 }

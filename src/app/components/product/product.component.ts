@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit {
   constructor(private app: MyAppService) { }
 
   ngOnInit(): void {
+
     this.app.getData().subscribe((res: any) => {
       this.products = res.products
       for (let i = 0; i < 3; i++) {
@@ -21,5 +22,6 @@ export class ProductComponent implements OnInit {
         
       }
     })
+
   }
 }

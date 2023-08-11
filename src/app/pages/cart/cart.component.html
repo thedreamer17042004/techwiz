@@ -1,5 +1,6 @@
 <app-menu></app-menu>
-<div class="parallax-window " style="height: 200px; background-size: auto; position: relative;" data-parallax="scroll" data-image-src="http://lovesome.biz/tf-template/garden/img/project-bg.jpg">
+<div class="parallax-window " style="height: 200px; background-size: auto; position: relative;" data-parallax="scroll"
+    data-image-src="http://lovesome.biz/tf-template/garden/img/project-bg.jpg">
     <div class="container xx">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -23,50 +24,52 @@
                 <div class="cart">
                     <h1 class="h1">Shopping cart</h1>
                     <div class="cart-overview">
-                       <ul class="cart-items">
+                        <ul class="cart-items">
                             <li class="cart-item">
-                                <div class="product-line-grid">
+                                <div class="product-line-grid mb-3" *ngFor="let item of cart">
                                     <div class="col-md-3 col-xs-4">
-                                        <img src="https://demo.fieldthemes.com/plant/150-cart_default/sed-ut-perspiciatis-unde-omnis-iste.jpg" alt="">
+                                        <img [src]="item.image" alt="">
                                     </div>
                                     <div class="col-md-4 col-xs-8">
                                         <div class="product-info">
-                                            <a href="#">Sed Ut Perspiciatis Unde Omnis Iste</a>
+                                            <a href="#">{{item.name}}</a>
                                         </div>
                                         <div class="product-price">
                                             <div class="product-discount">
-                                                <span class="regular-price">$24.00</span>
+                                                <span class="regular-price">${{item.price}}</span>
                                             </div>
                                             <div class="current-price">
-                                                <span class="price">$16.10</span>
+                                                <span class="price">${{item.saleprice}}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-5 col-xs-12">
-                                        <div class="row ddd" >
+                                        <div class="row ddd">
                                             <div class="col-md-10 col-xs-8">
                                                 <div class="row">
                                                     <div class="col-md-6 col-xs-6 qty">
                                                         <div class="input-group">
-                                                            <input type="text" class="input" value="1">
+                                                            <input type="text" class="input" [value]="item.amount">
                                                             <span class="input-group-btn-vertical">
-                                                                <button class="btnn_touch"><i class="fa-solid fa-angle-up"></i></button>
-                                                                <button class="btnn_touch"><i class="fa-solid fa-angle-down"></i></button>
+                                                                <button class="btnn_touch"><i
+                                                                        class="fa-solid fa-angle-up"></i></button>
+                                                                <button class="btnn_touch"><i
+                                                                        class="fa-solid fa-angle-down"></i></button>
                                                             </span>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6 col-xs-2 " >
+                                                    <div class="col-md-6 col-xs-2 ">
                                                         <span class="product-price">
                                                             <strong>
-                                                                $18.00
+                                                                ${{item.saleprice * item.amount}}
                                                             </strong>
                                                         </span>
                                                     </div>
-                                                
+
                                                 </div>
                                             </div>
-                                            <div class="col-md-2 col-xs-4 ">
-                                                <a href="#" class="icon-trash">
+                                            <div style="cursor: pointer;" class="col-md-2 col-xs-4 ">
+                                                <a class="icon-trash" (click)="removePrd(item.id)">
                                                     <i class="fa-solid fa-trash"></i>
                                                 </a>
                                             </div>
@@ -74,121 +77,21 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="cart-item">
-                                <div class="product-line-grid">
-                                    <div class="col-md-3 col-xs-4">
-                                        <img src="https://demo.fieldthemes.com/plant/175-cart_default/smartphone-oppo-a71.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-4 col-xs-8">
-                                        <div class="product-info">
-                                            <a href="#">Sed Ut Perspiciatis Unde Omnis Iste</a>
-                                        </div>
-                                        <div class="product-price">
-                                            <div class="product-discount">
-                                                <span class="regular-price">$24.00</span>
-                                            </div>
-                                            <div class="current-price">
-                                                <span class="price">$16.10</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 col-xs-12">
-                                        <div class="row">
-                                            <div class="col-md-10 col-xs-8">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-xs-6 qty">
-                                                        <div class="input-group">
-                                                            <input type="text" class="input" value="1">
-                                                            <span class="input-group-btn-vertical">
-                                                                <button class="btnn_touch"><i class="fa-solid fa-angle-up"></i></button>
-                                                                <button class="btnn_touch"><i class="fa-solid fa-angle-down"></i></button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-xs-2">
-                                                        <span class="product-price">
-                                                            <strong>
-                                                                $18.00
-                                                            </strong>
-                                                        </span>
-                                                    </div>
-                                                
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 col-xs-4">
-                                                <a href="#" class="icon-trash">
-                                                    <i class="fa-solid fa-trash"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cart-item">
-                                <div class="product-line-grid">
-                                    <div class="col-md-3 col-xs-4">
-                                        <img src="https://demo.fieldthemes.com/plant/154-cart_default/qui-dolorem-ipsum-quia-dolor-sit-amet.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-4 col-xs-8">
-                                        <div class="product-info">
-                                            <a href="#">Sed Ut Perspiciatis Unde Omnis Iste</a>
-                                        </div>
-                                        <div class="product-price">
-                                            <div class="product-discount">
-                                                <span class="regular-price">$24.00</span>
-                                            </div>
-                                            <div class="current-price">
-                                                <span class="price">$16.10</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 col-xs-12">
-                                        <div class="row">
-                                            <div class="col-md-10 col-xs-8">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-xs-6 qty">
-                                                        <div class="input-group">
-                                                            <input type="text" class="input" value="1">
-                                                            <span class="input-group-btn-vertical">
-                                                                <button class="btnn_touch"><i class="fa-solid fa-angle-up"></i></button>
-                                                                <button class="btnn_touch"><i class="fa-solid fa-angle-down"></i></button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-xs-2">
-                                                        <span class="product-price">
-                                                            <strong>
-                                                                $18.00
-                                                            </strong>
-                                                        </span>
-                                                    </div>
-                                                
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 col-xs-4">
-                                                <a href="#" class="icon-trash">
-                                                    <i class="fa-solid fa-trash"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                       </ul>
+                        </ul>
                     </div>
                 </div>
                 <a class="label" href="#">
                     <i class="fa-solid fa-chevron-left"></i><span>Continue shopping</span>
                 </a>
             </div>
-          
+
             <div class="col-md-4 col-sm-12 av">
                 <div class="cart">
                     <div class="cart-detail">
                         <div class="cart-block">
                             <div class="cart-sumary">
-                                <span class="labelx">4 item</span>
-                                <span class="value">$484.80</span>
+                                <span class="labelx">{{cart.length}} item</span>
+                                <span class="value">${{total}}</span>
                             </div>
                             <div class="cart-sumary">
                                 <span class="labelx">Shipping</span>
@@ -199,7 +102,7 @@
                         <div class="cart-block">
                             <div class="cart-sumary">
                                 <span class="labelx">Total</span>
-                                <span class="value">$494.80</span>
+                                <span class="value">${{total}}</span>
                             </div>
                             <div class="cart-sumary">
                                 <span class="labelx">Taxes</span>
@@ -210,6 +113,7 @@
 
                         <div class="checkout ">
                             <div class="text-sm-center">
+
                           <a routerLink="/checkout" class="btn btn-primary">Proceed to checkout</a>
                           
                         </div>
@@ -218,8 +122,6 @@
                 </div>
             </div>
         </div>
-
-       
     </div>
 </div>
 

@@ -1,28 +1,28 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
-import { CategoryService } from 'src/app/service/category.service';
-import { NotificationsService } from 'src/app/service/notifications.service';
-
+import { AppService } from 'src/app/service/app.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  
-  constructor(private serve:CategoryService, private _route:Router,private _http:HttpClient
-    ,private toastr: ToastrService,private notifyService :NotificationsService
-    ){}
   signF: FormGroup = new FormGroup({
     username: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.email, Validators.required]),
-    password: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+    ]),
   });
+
+  json: any = '';
+
+  constructor(private app: AppService
+  ) { }
 
   get f() {
     return this.signF.controls;
@@ -31,16 +31,14 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  onSubmit(signF:FormGroup) {
-    if(this.signF.invalid) return;
-      this.serve.postUser(this.signF.value).subscribe(res=>{
-        console.log(res)
-        this.notifyService.showSuccessWithTimeout("Registered successfully", "Notification", 1000)
-        this.signF.reset();
-        this._route.navigate(['']);
-      }, err=>{
-        this.notifyService.showfalse("Something went wrong", "Notification", 1009)
-      })
-       
+
+  onSubmit() {
+    let check = this.app.saveAccount(this.signF.value);
+    if (check) {
+      alert("Success");
+      this.signF.reset();
+    } else {
+      alert('Email already exists')
+    }
   }
 }

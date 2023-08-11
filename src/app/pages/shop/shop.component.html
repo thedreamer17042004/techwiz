@@ -1,19 +1,20 @@
 <app-menu></app-menu>
-<div class="parallax-window " style="height: 200px; background-size: auto; position: relative;" data-parallax="scroll" data-image-src="http://lovesome.biz/tf-template/garden/img/project-bg.jpg">
+<div class="parallax-window " style="height: 200px; background-size: auto; position: relative;" data-parallax="scroll"
+  data-image-src="http://lovesome.biz/tf-template/garden/img/project-bg.jpg">
   <div class="container xx">
-      <div class="row">
-          <div class="col-md-12 text-center">
-              <div class="page-title">
-                  <div class="title">
-                      <h2>Shop</h2>
-                  </div>
-                  <ul class="breadcrumb">
-                      <li><a routerLink="" class="home0">Home / </a></li>
-                      <li class="active"> Shop</li>
-                  </ul>
-              </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="page-title">
+          <div class="title">
+            <h2>Shop</h2>
           </div>
+          <ul class="breadcrumb">
+            <li><a routerLink="" class="home0">Home / </a></li>
+            <li class="active"> Shop</li>
+          </ul>
+        </div>
       </div>
+    </div>
   </div>
 </div>
 <div class="breadcrumb-area mb-5">
@@ -99,7 +100,7 @@
                     <!-- <span class="sticker new-product">New</span> -->
                     <span class="sticker sale-product">Sale</span>
                     <div class="btn-area">
-                      <a href="#" class="my-btn">
+                      <a routerLink="/cart" class="my-btn" (click)="addToCart(prd.id)">
                         <i class="fa-solid fa-cart-shopping"></i>
                       </a>
                       <a href="#" class="my-btn">
