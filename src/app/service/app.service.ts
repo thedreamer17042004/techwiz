@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+const _api = 'http://localhost:3000';
+
 @Injectable({
   providedIn: 'root'
 })
-export class MyAppService {
 
+export class AppService {
 
   constructor(private http: HttpClient) { }
 
@@ -97,26 +99,22 @@ export class MyAppService {
   }
 
   checkPrdExists(id: any, data: any) {
-    return data.find((item: any) => {
+    return data.findIndex((item: any) => {
       return item.id == id;
     })
   }
 
   savePrd(prd: any) {
     let cart = this.getCart();
-    let prdCart = this.checkPrdExists(prd.id, cart);
-    if (prdCart) {
-      let index = cart.findIndex((item: any) => {
-        return item.id == prdCart.id;
-      });
-
+    let index = this.checkAccountExists(prd.id, cart);
+    if (index) {
       cart[index].amount += 1;
     } else {
       cart.push(prd);
     }
 
     let cartJson = JSON.stringify(cart);
-    localStorage.setItem('cart', cartJson);
+    localStorage.setItem('account', cartJson);
     return true;
   }
 }
