@@ -44,6 +44,11 @@ export class CartComponent implements OnInit {
     let cartJson = JSON.stringify(this.cart);
     localStorage.setItem('cart', cartJson);
 
+    this.total = 0;
+    for (const item of this.cart) {
+      this.total += (item.saleprice * item.amount);
+    }
+
     this.router.navigate(['/cart']);
   }
 
@@ -57,6 +62,11 @@ export class CartComponent implements OnInit {
     let cartJson = JSON.stringify(this.cart);
     localStorage.setItem('cart', cartJson);
 
+    this.total = 0;
+    for (const item of this.cart) {
+      this.total += (item.saleprice * item.amount);
+    }
+
     this.router.navigate(['/cart']);
   }
 
@@ -64,6 +74,7 @@ export class CartComponent implements OnInit {
     let index = this.cart.findIndex((item: any) => {
       return item.id == id;
     });
+
 
     if (this.cart[index].amount == 0) {
       this.removePrd(id);
@@ -73,6 +84,11 @@ export class CartComponent implements OnInit {
 
     let cartJson = JSON.stringify(this.cart);
     localStorage.setItem('cart', cartJson);
+
+    this.total = 0;
+    for (const item of this.cart) {
+      this.total += (item.saleprice * item.amount);
+    }
 
     this.router.navigate(['/cart']);
   }

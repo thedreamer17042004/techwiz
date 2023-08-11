@@ -1,8 +1,8 @@
 <app-menu></app-menu>
 <div class="container col-10 my-5 br-2 rounded">
     <div class="row g-3">
-       
-        
+
+
         <div class="col-md-8">
             <h4>Billing Address</h4>
             <form>
@@ -76,8 +76,8 @@
                 <div class="cart-detail">
                     <div class="cart-block">
                         <div class="cart-sumary">
-                            <span class="labelx">4 item</span>
-                            <span class="value">$484.80</span>
+                            <span class="labelx">{{cart.length}} item</span>
+                            <span class="value">${{total}}</span>
                         </div>
                         <div class="cart-sumary">
                             <span class="labelx">Shipping</span>
@@ -88,21 +88,21 @@
                     <div class="cart-block">
                         <div class="cart-sumary">
                             <span class="labelx">Total</span>
-                            <span class="value">$494.80</span>
+                            <span class="value">${{total + 7}}</span>
                         </div>
                         <div class="cart-sumary">
                             <span class="labelx">Taxes</span>
                             <span class="value">$0.00</span>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
     </div>
 
-    
+
 </div>
 
 <app-footer></app-footer>
