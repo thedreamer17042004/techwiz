@@ -11,21 +11,21 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'blog', component:BlogComponent},
-  {path: 'blog-detail', component:DetailBlogComponent},
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'blog-detail', component: DetailBlogComponent },
   { path: 'shop', component: ShopComponent },
-  {path: 'cart', component:CartComponent},
-  {path: 'about', component:AboutUsComponent},
-  {path: 'contact', component: ContactComponent}
+  { path: 'cart', component: CartComponent },
+  { path: 'about', component: AboutUsComponent },
+  { path: 'contact', component: ContactComponent }
 
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

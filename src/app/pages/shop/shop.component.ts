@@ -1,8 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CategoryService } from 'src/app/service/category.service';
-import { ProductService } from 'src/app/service/product.service';
+import { MyAppService } from 'src/app/service/my-app.service';
 declare var $: any;
 
 @Component({
@@ -14,29 +14,22 @@ export class ShopComponent implements OnInit {
   products: any = [];
   category: any = [];
   myParams: any = {};
-  url: string = '';
+  searchProduct: any = {};
+  url: string = 'assets/data.json';
   sortType: string = 'Sort by';
   searchForm: FormGroup = new FormGroup({
     name: new FormControl(''),
   });
 
   constructor(
-    private productService: ProductService,
-    private categoryService: CategoryService,
     private route: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private app: MyAppService
   ) {
     route.navigate(['/shop']);
   }
 
-  ngOnInit(): void {
-    this.productService.getProduct().subscribe((data) => {
-      this.products = data;
-    });
-
-    this.categoryService.getCategory().subscribe((data) => {
-      this.category = data;
-    });
+  ngOnInit() {
 
     this.activatedRoute.queryParamMap.subscribe((params) => {
       let urlCat: string = params.has('categoryId')
@@ -50,17 +43,18 @@ export class ShopComponent implements OnInit {
       this.url = urlCat + urlSort;
     });
 
-   
-
     // owlcarowsel thay đổi btn slidering
-    $(document).ready(function(){
+    $(document).ready(function () {
       // parralax
-      $('.parallax-window').parallax({imageSrc: 'http://lovesome.biz/tf-template/garden/img/page-title-bg.jpg'});
+      $('.parallax-window').parallax({ imageSrc: 'http://lovesome.biz/tf-template/garden/img/page-title-bg.jpg' });
 
     })
-  
-   
-    
+
+    this.app.getData().subscribe((res: any) => {
+      this.category = res.category;
+      this.products = res.products;
+    })
+
   }
 
   async showProductByCat(id: number) {
@@ -68,9 +62,9 @@ export class ShopComponent implements OnInit {
 
     await this.route.navigate(['/shop'], { queryParams: this.myParams });
 
-    this.productService.getProductShop(this.url).subscribe((data) => {
-      this.products = data;
-    });
+    this.app.getData().subscribe((res: any) => {
+      this.products = this.app.getProductByCatId(id, res.products);
+    })
   }
 
   async showProductSort(sort: string, order: string, text: string) {
@@ -80,9 +74,7 @@ export class ShopComponent implements OnInit {
 
     await this.route.navigate(['/shop'], { queryParams: this.myParams });
 
-    this.productService.getProductShop(this.url).subscribe((data) => {
-      this.products = data;
-    });
+    this.products = this.app.getProductBySort(sort, order, this.products);
   }
 
   async showProductSearch() {
@@ -90,9 +82,9 @@ export class ShopComponent implements OnInit {
 
     await this.route.navigate(['/shop'], { queryParams: { q: name } });
 
-    this.productService.getProductShop(`q=${name}`).subscribe((data) => {
-      this.products = data;
-    });
+    this.app.getData().subscribe((res: any) => {
+      this.products = this.app.getProductByName(name, res.products);
+    })
 
     this.searchForm.reset();
   }
@@ -103,8 +95,8 @@ export class ShopComponent implements OnInit {
 
     this.route.navigate(['/shop']);
 
-    this.productService.getProduct().subscribe((data) => {
-      this.products = data;
-    });
+    this.app.getData().subscribe((res: any) => {
+      this.products = res.products;
+    })
   }
 }
