@@ -2172,6 +2172,12 @@ ul.breadcrumb li a {
   /* margin-left: -1px; */
   position: relative;
 }
+
+.btnn_touch:focus {
+  border: none;
+  outline: none;
+}
+
 .btnn_touch i {
   top: 0.0625rem;
   left: 0.1875rem;
