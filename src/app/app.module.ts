@@ -21,6 +21,8 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 
 import { BlogComponent } from './pages/blog/blog.component';
 import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
+import { LoginComponent } from './components/login/login.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 
@@ -41,10 +43,12 @@ import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
     HomeComponent,
     GalleryHomeComponent,
 
-    ContactsComponent
+    ContactsComponent,
 
     BlogComponent,
     DetailBlogComponent,
+    LoginComponent,
+    DetailsComponent
 
 
 
