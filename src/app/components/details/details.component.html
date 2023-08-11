@@ -1,5 +1,6 @@
 <app-menu></app-menu>
-<div class="parallax-window " style="height: 200px; background-size: auto; position: relative;" data-parallax="scroll" data-image-src="http://lovesome.biz/tf-template/garden/img/project-bg.jpg">
+<div class="parallax-window " style="height: 200px; background-size: auto; position: relative;" data-parallax="scroll"
+    data-image-src="http://lovesome.biz/tf-template/garden/img/project-bg.jpg">
     <div class="container xx">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -24,27 +25,9 @@
                     <div class="row">
                         <div class="in-detailt-left col-lg-6">
                             <div class="dd-detail">
-                                <!-- <img src="./assets/images/sp13.jpg" alt=""> -->
                                 <img [src]="dataDetail.image" alt="">
                                 <p class="new-left">new</p>
                                 <p class="sale-right">sale</p>
-                            </div>
-                            <div class="owl-carousel owl-theme detail-carow">
-                                <div class="detail-item  item">
-                                    <img src="./assets/images/sp13.jpg" alt="55">
-                                </div>
-                                <div class="detail-item  item">
-                                    <img src="./assets/images/sp2.jpg" alt="55">
-                                </div>
-                                <div class="detail-item  item">
-                                    <img src="./assets/images/sp3.jpg" alt="55">
-                                </div>
-                                <div class="detail-item  item">
-                                    <img src="./assets/images/sp4.jpg" alt="55">
-                                </div>
-                                <div class="detail-item  item">
-                                    <img src="./assets/images/sp5.jpg" alt="55">
-                                </div>
                             </div>
                         </div>
                         <div class="in-detailt-right  col-lg-6">
@@ -65,98 +48,60 @@
                                 </div>
                             </div>
                             <div class="in-detailt-text">
-                                <p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Sed lectus.</p>
+                                <p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae
+                                    euismod ligula urna in dolor. Sed lectus.</p>
                             </div>
-                            <div class="price">
+                            <div class="price mb-4">
                                 <div class="row thut">
-                                    <h4>{{dataDetail.saleprice}} </h4>
-                                    <p class="gach">{{dataDetail.price}}</p>
+                                    <h4>${{dataDetail.saleprice}} </h4>
+                                    <p class="gach">${{dataDetail.price}}</p>
                                 </div>
                             </div>
-                            <div class="color">
-                              <div class="row cl">
-                                <p>COLOR</p>
-                                <input class="yellow cl-item" type="text">
-                                <input class="green cl-item" type="text">
-                              </div>
-                            </div>
-                            <div class="number">
-                                <div class="row nb">
-                                    <div class="nb-text">
-                                        <p>QUANTITY</p>
-                                    </div>
-                                    <div class="tang">
-                                        <div class="row tat">
-                                            <div class="nhap  col-sm-6 col-md-5 col-lg-5">
-                                                <input class="nb-tt" type="text" value="1">
-                                            </div>
-                                            <div class="thay-doi  col-sm-6 col-md-7 col-lg-7">
-                                                <div class="bt-item">
-                                                    <button><i class="fa-solid fa-plus"></i></button>
-                                                </div>
-                                                <div class="bt-item">
-                                                    <button><i class="fa-solid fa-minus"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  
-                                </div>
-                              </div>
+                            <a style="cursor: pointer;" class="add-cart-btn" (click)="addToCart(dataDetail.id)">
+
+                                <i class="fa-solid fa-plus"></i> Add to cart
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="detailt-in-bottom">
                     <div role="tabpanel">
                         <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation li-tab" class="active">
-                                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="a-tab">Description</a>
-                                </li>
-                                <li role="presentation li-tab">
-                                    <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab" class="a-tab">Product Details</a>
-                                </li>
-                                <li role="presentation li-tab">
-                                    <a href="#hello" aria-controls="tab" role="tab" data-toggle="tab" class="a-tab hidden">Reviews</a>
+                            <li role="presentation li-tab" class="active">
+                                <a href="#home" aria-controls="home" role="tab" data-toggle="tab"
+                                    class="a-tab">Description</a>
+                            </li>
+                            <li role="presentation li-tab">
+                                <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab" class="a-tab">Product
+                                    Details</a>
+                            </li>
+                            <li role="presentation li-tab">
+                                <a href="#hello" aria-controls="tab" role="tab" data-toggle="tab"
+                                    class="a-tab hidden">Reviews</a>
 
-                                </li>
-                            </ul>
+                            </li>
+                        </ul>
                         <div class="tab-content cha-tab">
-                            <div role="tabpanel" class="tab-pane active tt-tab" id="home">Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Sed lectus. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Nam at tortor in tellus interdum sagittis. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Morbi mollis tellus ac sapien. Nunc nec neque. Praesent nec nisl a purus blandit viverra. Nunc nec neque. Pellentesque auctor neque nec urna.
-                                Curabitur suscipit suscipit tellus. Cras id dui. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas vestibulum mollis diam.</div>                
-                        </div>     
+                            <div role="tabpanel" class="tab-pane active tt-tab" id="home">Vestibulum facilisis, purus
+                                nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Sed
+                                lectus. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Nam at tortor
+                                in tellus interdum sagittis. Pellentesque egestas, neque sit amet convallis pulvinar,
+                                justo nulla eleifend augue, ac auctor orci leo non est. Morbi mollis tellus ac sapien.
+                                Nunc nec neque. Praesent nec nisl a purus blandit viverra. Nunc nec neque. Pellentesque
+                                auctor neque nec urna.
+                                Curabitur suscipit suscipit tellus. Cras id dui. Nam ipsum risus, rutrum vitae,
+                                vestibulum eu, molestie vel, lacus. Class aptent taciti sociosqu ad litora torquent per
+                                conubia nostra, per inceptos hymenaeos. Maecenas vestibulum mollis diam.</div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="detail-right col-lg-3">
-               <div class="detailt-right-top">
-                <h5>SPECIAL PRODUCTS</h5>
-                <div class="owl-carousel owl-theme detail-right-special">
-                    <div class="card text-left vim">
-                        <div class="img-in-detail">
-                            <img src="./assets/images/sp2.jpg" alt="55">
-                        </div>
-                        <div class="tt-in-detailt">
-                            <a href="">Malesuada erat ut turpis.</a>
-                        <div class="icon-det-crat">
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <div class="price-in-right">
-                           <div class="row ct-dt">
-                            <p>$17.60</p>
-                            <p class="gach">$22.00</p>
-                           </div>
-                        </div>
-                        </div>
+                <div class="detailt-right-top">
+                    <div class="detail-right-bottom">
+                        <img style="width: 100%;" src="./assets/images/detailboy.jpg" alt="">
                     </div>
                 </div>
-                <div class="detail-right-bottom">
-                    <img src="./assets/images/detailboy.jpg" alt="">
-                </div>
-               </div>
             </div>
         </div>
     </div>
