@@ -1,11 +1,17 @@
-
 <app-menu></app-menu>
 <div class="section" style="padding: 30px 0px;">
     <div class="container" style="width: 50%;">
         ﻿<div class="card" >
-            <h4 class="card-header">Login</h4>
+            <h4 class="card-header">Register</h4>
             <div class="card-body">
-                <form [formGroup]="loginF" (ngSubmit)="onSubmit(loginF)">
+                <form [formGroup]="signF" (ngSubmit)="onSubmit(signF)">
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" formControlName="username" class="form-control"  />
+                        <div *ngIf="f['username'].dirty && f['username'].errors">
+                            <small *ngIf="f['username'].errors['required']">Username không được để trống</small>
+                        </div>
+                    </div>
                     <div class="mb-3">
                         <label class="form-label">Email</label>
                         <input type="text" formControlName="email" class="form-control"  />
@@ -19,13 +25,11 @@
                         <input type="password" formControlName="password" class="form-control"  />
                         <div *ngIf="f['password'].dirty && f['password'].errors">
                             <small *ngIf="f['password'].errors['required']">Password không được để trống</small>
-                            <small *ngIf="f['password'].errors['minlength']">Password tối thiểu 3 ký tự</small>
+                            <small *ngIf="f['password'].errors['password']">Password không đúng định dạng</small>
                         </div>
                     </div>
                     <div>
-                        <button type="submit"  class="btn btn-success" [disabled]="!loginF.dirty || loginF.invalid">Login</button>
-
-                        <a routerLink="../register" class="btn btn-link">Register</a>
+                        <button type="submit" class="btn btn-success" [disabled]="!signF.dirty || signF.invalid">Register</button>
                     </div>
                 </form>
             </div>
