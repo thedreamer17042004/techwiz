@@ -11,7 +11,9 @@
         </div>
         <div class="header-right col-md-12 col-lg-3">
             <a routerLink="/login"><i class="fa-solid fa-right-to-bracket"></i> login</a>
+
             <a routerLink="/register"><i class="fa-regular fa-user"></i>register</a>
+
         </div></div>
     </div>
 </div>
@@ -22,12 +24,18 @@
                 <nav class="navbar navbar-expand-sm navbar-dark">
                     
                         <div class="logo col-md-12 col-lg-4">
+
+                          
+
                             <a routerLink=""><img src="assets/images/logo.png" alt="logo-plan"></a>
+
                         </div>
                         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
                         <div class="collapse navbar-collapse menu-right col-md-12 col-lg-8" id="collapsibleNavId">
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                                 <li class="nav-item active">
+
+
                                     <a class="nav-link " routerLink="/">HOME <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
@@ -36,7 +44,7 @@
 
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="#">DETAILS</a>
+                                    <a class="nav-link " routerLink="/detail">DETAILS</a>
                                 </li>
                                 <li class="nav-item">
 
@@ -61,7 +69,7 @@
                             
                             <form class="form-inline my-2 my-lg-0">
                                 <input class="form-control mr-sm-2 hidden" type="text" placeholder="Search">
-                                <i class="fa-solid fa-magnifying-glass search"></i>
+                                <!-- <i class="fa-solid fa-magnifying-glass search"></i> -->
                                 <a routerLink="/cart"><i class="fa-solid fa-cart-shopping" style="margin-left: 8px;cursor: pointer;"></i></a>
                             </form>
                         </div>

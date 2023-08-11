@@ -1,3 +1,5 @@
+
+
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -8,11 +10,13 @@ import { CategoryService } from 'src/app/service/category.service';
 import { NotificationsService } from 'src/app/service/notifications.service';
 declare var $:any;
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit{
 
   constructor(private serve:CategoryService, private _route:Router,private _http:HttpClient
@@ -47,10 +51,12 @@ export class LoginComponent implements OnInit{
            this._route.navigate(['login']);
          }
        }, err=>{
-         alert('Something was wrong');
+        this.notifyService.showfalse("Something went wrong", "Notification", 1009)
+
        })
       
    
      
   }
+
 }
