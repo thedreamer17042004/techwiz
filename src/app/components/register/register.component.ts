@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
-import { AppService } from 'src/app/service/app.service';
+import { MyAppService } from 'src/app/service/my-app.service';
 
 @Component({
   selector: 'app-register',
@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
 
   json: any = '';
 
-  constructor(private app: AppService
+  constructor(private app: MyAppService
   ) { }
 
   get f() {

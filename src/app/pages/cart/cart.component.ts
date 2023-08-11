@@ -41,6 +41,9 @@ export class CartComponent implements OnInit {
 
     this.cart.splice(index, 1);
 
+    let cartJson = JSON.stringify(this.cart);
+    localStorage.setItem('cart', cartJson);
+
     this.router.navigate(['/cart']);
   }
 }
