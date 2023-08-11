@@ -2727,3 +2727,14 @@ ul.category-menu {
 .my-sort-btn:hover {
   color: #333;
 }
+
+.banner .btn-info,
+.banner .btn-success {
+  border: 2px solid #6cbe03 !important;
+}
+
+.banner .btn-info:hover,
+.banner .btn-success:hover {
+  background-color: #fff !important;
+  color: #6cbe03;
+}

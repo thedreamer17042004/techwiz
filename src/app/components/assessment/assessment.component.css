@@ -106,10 +106,10 @@ h6 {
   transition: 0.3s all;
 }
 
-.garden-btn span {
+.garden-btn span.asses {
   display: block;
   position: absolute;
-  bottom: -2px;
+  bottom: 3px;
   left: 50%;
   transform: translateX(-50%);
 }
