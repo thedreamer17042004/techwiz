@@ -1,4 +1,6 @@
 
+
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -8,12 +10,15 @@ import { MyAppService } from 'src/app/service/my-app.service';
 
 declare var $: any;
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
+
 export class LoginComponent implements OnInit {
+
   loginF: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.email, Validators.required]),
     password: new FormControl('', [
@@ -40,6 +45,7 @@ export class LoginComponent implements OnInit {
 
     let acc = this.app.checkLogin(account, accounts);
 
+
     if (!acc) {
       alert('Wrong email or password');
     } else {
@@ -48,5 +54,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('isLogin', accJson);
       this.route.navigate(['/']);
     }
+
   }
+
 }

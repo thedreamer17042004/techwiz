@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
 
   }
 
+
   onSubmit() {
     let check = this.app.saveAccount(this.signF.value);
     if (check) {

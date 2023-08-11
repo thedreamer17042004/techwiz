@@ -202,3 +202,10 @@
           margin-top: 30px;
       }
   }
+
+  @media screen and (max-width: 540px) {
+    .ctnn{
+        width: 100% !important;
+    }
+    
+}
