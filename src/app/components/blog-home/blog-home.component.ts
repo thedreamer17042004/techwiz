@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/service/product.service';
 declare var $: any;
 
 @Component({
@@ -9,14 +8,7 @@ declare var $: any;
 })
 export class BlogHomeComponent implements OnInit {
 
-  data:any = new Array();
-  constructor(private service: ProductService) {
-    this.service.getProduct().subscribe(data => {
-      this.data = data;
-      console.log(this.data)
-      
-    });
-    
+  constructor() {
 
   }
 

@@ -15,5 +15,15 @@ export class CategoryService {
   getCategory(): Observable<any> {
     return this.http.get<any>(`${_api}/category`);
   }
+  getUsers():Observable<any> {
+   
+      return this.http.get<any[]>(`${_api}/login`);
+  
+  }
+  postUser(data:any):Observable<any> {
+   
+    return this.http.post<any>(`${_api}/login`, data)
+  
+  }
 
 }
