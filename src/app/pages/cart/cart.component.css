@@ -138,16 +138,17 @@ ul.breadcrumb li a {
 .btnn_touch {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  border: none;
   height: 1.3125rem;
   line-height: 18px;
   outline: none;
   font-size: 14px;
+  padding: 5px 10px;
 
   display: block;
   float: none;
   width: 100%;
   max-width: 100%;
-  padding: 8px 10px;
   /* margin-left: -1px; */
   position: relative;
 }

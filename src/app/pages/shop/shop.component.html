@@ -100,10 +100,10 @@
                     <!-- <span class="sticker new-product">New</span> -->
                     <span class="sticker sale-product">Sale</span>
                     <div class="btn-area">
-                      <a routerLink="/cart" class="my-btn" (click)="addToCart(prd.id)">
+                      <a style="cursor: pointer; color: #fff;" class="my-btn" (click)="addToCart(prd.id)">
                         <i class="fa-solid fa-cart-shopping"></i>
                       </a>
-                      <a href="#" class="my-btn">
+                      <a style="cursor: pointer; color: #fff;" class="my-btn">
                         <i class="fa-solid fa-heart"></i>
                       </a>
                       <a [routerLink]="['/detail', prd.id]" class="my-btn">

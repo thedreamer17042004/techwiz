@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "Lorem ipsum dolor sit ame.",
+      "name": "Cactus",
       "image": "./assets/images/sp1.jpg",
       "amount": 1,
       "price": 65,
@@ -12,27 +12,27 @@
     },
     {
       "id": 2,
-      "name": "Sed Ut Perspiciatis Unde Ispum Serq",
+      "name": "Buttercup",
       "image": "./assets/images/sp2.jpg",
       "amount": 1,
       "price": 24,
-      "saleprice": 16.8,
+      "saleprice": 16,
       "categoryId": 3,
       "star": 0
     },
     {
       "id": 3,
-      "name": "Suspendisse urna nibh.",
+      "name": "Daffodil",
       "image": "./assets/images/sp3.jpg",
       "amount": 1,
       "price": 55,
-      "saleprice": 0,
+      "saleprice": 10,
       "categoryId": 4,
       "star": 4
     },
     {
       "id": 4,
-      "name": "Quisque volutpat mattis.",
+      "name": "Dandelion",
       "image": "./assets/images/sp4.jpg",
       "amount": 1,
       "price": 80,
@@ -42,7 +42,7 @@
     },
     {
       "id": 5,
-      "name": "Qui Dolorem Ipsum",
+      "name": "Chrysanthemum",
       "image": "./assets/images/sp5.jpg",
       "amount": 1,
       "price": 40,
@@ -52,7 +52,7 @@
     },
     {
       "id": 6,
-      "name": "Malesuada erat ut turpis.",
+      "name": "Crocus",
       "image": "./assets/images/sp6.jpg",
       "amount": 1,
       "price": 22,
@@ -62,7 +62,7 @@
     },
     {
       "id": 7,
-      "name": "Amy Byer Big Colorblock",
+      "name": "Brambles",
       "image": "./assets/images/sp7.jpg",
       "amount": 1,
       "price": 25,
@@ -72,17 +72,17 @@
     },
     {
       "id": 8,
-      "name": "Lorem ipsum dolor sit ame.",
+      "name": "Bracken",
       "image": "./assets/images/sp8.jpg",
       "amount": 1,
       "price": 899,
-      "saleprice": 0,
+      "saleprice": 105,
       "categoryId": 2,
       "star": 5
     },
     {
       "id": 9,
-      "name": "Garden Asplenium",
+      "name": "Daisy",
       "image": "./assets/images/sp9.jpg",
       "amount": 1,
       "price": 159,
@@ -92,7 +92,7 @@
     },
     {
       "id": 10,
-      "name": "Table Garden Asplenium",
+      "name": "Bluebell",
       "image": "./assets/images/sp10.jpg",
       "amount": 1,
       "price": 199,

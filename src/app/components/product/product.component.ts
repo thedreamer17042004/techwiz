@@ -9,7 +9,7 @@ import { MyAppService } from 'src/app/service/my-app.service';
 })
 export class ProductComponent implements OnInit {
   products: any = [];
-  pro:any = []
+  pro: any = []
 
   constructor(private app: MyAppService) { }
 
@@ -18,10 +18,18 @@ export class ProductComponent implements OnInit {
     this.app.getData().subscribe((res: any) => {
       this.products = res.products
       for (let i = 0; i < 3; i++) {
-       this.pro.push(this.products[i]);
-        
+        this.pro.push(this.products[i]);
+
       }
     })
 
+  }
+
+  addToCart(id: any) {
+    let prd = this.app.getProductById(id, this.products);
+    let check = this.app.savePrd(prd);
+    if (check) {
+      alert("Success");
+    }
   }
 }

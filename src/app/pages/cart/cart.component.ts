@@ -46,4 +46,34 @@ export class CartComponent implements OnInit {
 
     this.router.navigate(['/cart']);
   }
+
+  plus(id: number) {
+    let index = this.cart.findIndex((item: any) => {
+      return item.id == id;
+    });
+
+    this.cart[index].amount += 1;
+
+    let cartJson = JSON.stringify(this.cart);
+    localStorage.setItem('cart', cartJson);
+
+    this.router.navigate(['/cart']);
+  }
+
+  minus(id: number) {
+    let index = this.cart.findIndex((item: any) => {
+      return item.id == id;
+    });
+
+    if (this.cart[index].amount == 0) {
+      this.removePrd(id);
+    } else {
+      this.cart[index].amount -= 1;
+    }
+
+    let cartJson = JSON.stringify(this.cart);
+    localStorage.setItem('cart', cartJson);
+
+    this.router.navigate(['/cart']);
+  }
 }
