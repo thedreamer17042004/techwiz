@@ -29,10 +29,15 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 
 import { BlogComponent } from './pages/blog/blog.component';
 import { DetailBlogComponent } from './pages/detail-blog/detail-blog.component';
+
+import { LoginComponent } from './components/login/login.component';
+import { DetailsComponent } from './components/details/details.component';
+
 import { CartComponent } from './pages/cart/cart.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+
 
 
 
@@ -51,17 +56,26 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     HomeComponent,
     GalleryHomeComponent,
 
+
+
     ShopComponent,
+
 
     LoginComponent,
     RegisterComponent,
     ContactsComponent,
     BlogComponent,
     DetailBlogComponent,
+
+    LoginComponent,
+    DetailsComponent,
+
+
     CartComponent,
     AboutUsComponent,
     ContactComponent,
     CheckoutComponent
+
   ],
   imports: [
     BrowserModule,
