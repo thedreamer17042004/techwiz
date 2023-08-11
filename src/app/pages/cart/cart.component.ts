@@ -49,7 +49,6 @@ export class CartComponent implements OnInit {
       this.total += (item.saleprice * item.amount);
     }
 
-    this.router.navigate(['/cart']);
   }
 
   plus(id: number) {
@@ -66,8 +65,6 @@ export class CartComponent implements OnInit {
     for (const item of this.cart) {
       this.total += (item.saleprice * item.amount);
     }
-
-    this.router.navigate(['/cart']);
   }
 
   minus(id: number) {
@@ -89,7 +86,5 @@ export class CartComponent implements OnInit {
     for (const item of this.cart) {
       this.total += (item.saleprice * item.amount);
     }
-
-    this.router.navigate(['/cart']);
   }
 }
