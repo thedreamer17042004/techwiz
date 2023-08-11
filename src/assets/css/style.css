@@ -2738,3 +2738,17 @@ ul.category-menu {
   background-color: #fff !important;
   color: #6cbe03;
 }
+
+.product-area .price.sale {
+  margin-right: 0px;
+}
+
+.product-area .price.base {
+  margin-right: 0px;
+}
+
+.my-price-area {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
