@@ -2713,3 +2713,11 @@ ul.category-menu {
 .search-box .btn:focus {
   box-shadow: none;
 }
+
+.my-sort-btn {
+  color: #333;
+}
+
+.my-sort-btn:hover {
+  color: #333;
+}
