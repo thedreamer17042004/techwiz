@@ -1,0 +1,109 @@
+.garden-btn {
+  width: 160px;
+  height: 50px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 30px;
+  text-transform: capitalize;
+  background-color: #6cbe03;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+aside {
+  margin-bottom: 20px;
+  border: 1px solid #6cbe03;
+  padding: 0 20px 20px;
+}
+
+.widget-title {
+  background-color: #6cbe03;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 16px;
+  margin-bottom: 25px;
+
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: capitalize;
+  font-family: "Raleway", sans-serif;
+}
+
+.sidebar-widget a {
+  color: #272727;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+
+.post {
+  overflow: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.post-img {
+  float: left;
+  width: 30%;
+  padding-top: 5px;
+}
+
+.post-info {
+  float: right;
+  padding-left: 19px;
+  width: 70%;
+}
+
+.post-info h3 {
+  color: #272727;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.post-info p {
+  color: #777;
+  font-weight: 400;
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+.post-info p span {
+  display: block;
+  font-size: 13px;
+  text-align: right;
+  color: #6cbe03;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.keywords span {
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin: 10px 5px;
+  padding: 10px;
+  transition: 0.5s;
+}
+.keywords span:hover {
+  background-color: #6cbe03;
+  color: #fff;
+}
+
+@media screen and (max-width: 540px) {
+  .reply-commnet-content {
+    padding: 20px;
+  }
+  aside[_ngcontent-ng-c1696102580] {
+    margin-top: 10px;
+  }
+}
